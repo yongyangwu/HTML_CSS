@@ -1,0 +1,31 @@
+*{margin: 0;padding: 0;font-family: "微软雅黑";box-sizing: border-box;outline: none;}
+/*头部总览 2016-12-14*/
+.realtimeinfo_asset{width: 100%;padding: 15px;height: 220px;background: rgb(73,159,255);color: white;}
+.assetTop,.assetBottom{width: 100%;height: 50%;}
+.assetBold{font-weight: bold;}
+.assetBigYen{font-size: 28px;margin-right: 5px;}
+.assetBigNum{font-size: 48px;}
+.assetLeft,.assetRight{width: 50%;float: left;padding: 10px 0px;line-height: 28px;}
+.assetLeft{border-right: 1px solid white;}
+.assetRight{padding-left: 15px;}
+.assetBottmNum{margin-left: 3px;font-size: 18px;}
+
+
+
+/*日期选择 2016-12-14*/
+.realtimeinfo_datePicker{width: 100%;padding: 5px 15px;border-bottom: 1px solid rgb(221,221,221);position: relative; z-index:3;}
+.choseDate{width: 100%;height: 40px;border: 0;background: none;box-shadow: none;font-size: 16px;-webkit-tap-highlight-color: rgba(0,0,0,0);position: relative;z-index: 2;}
+.bg_datepicker{display: block;width: 30px;height: 30px;background: url(../images/ico_date@2x.png) no-repeat center center;background-size: 100%;vertical-align: middle;position: absolute;top: 10px;right: 15px;}
+input::-webkit-clear-button{-webkit-appearance: none;}/*去除叉叉按钮*/
+input::-webkit-inner-spin-button {display: none;}/*去除上下加减按钮*/
+input::-webkit-calendar-picker-indicator {opacity: 0;}/*隐藏日历倒三角按钮，去除之后日历无法显示*/
+
+/*列表 2016-12-14*/
+.realtimeinfo_list{width: 100%;border-top: 1px solid rgb(221,221,221);}
+.realtimeinfo_list_item{padding: 15px;border-bottom: 1px solid rgb(221,221,221);}
+.list_item_left{float: left;width: 70%;}
+.list_item_right{float: right;}
+.font-red{color: red;font-size: 18px;}
+.font-black{width:100%;height:20px;line-height:20px;color: rgb(51,51,51);font-size: 16px;overflow: hidden;text-overflow: ellipsis;display: -webkit-box;  -webkit-line-clamp: 1;  -webkit-box-orient: vertical;white-space: normal;  word-break: break-all;}
+.font-gray{color:rgb(173,173,173);font-size: 14px;line-height: 20px;text-align: right;padding-top: 2px;}
+.bg_xiaoliushop{display: inline-block;width: 16px;height: 16px;background: url(../images/ico_shop@2x.png) no-repeat center center;background-size: 100%;vertical-align: middle;margin-right: 3px;}
