@@ -9,24 +9,21 @@
             margin: 0;
             font-size: 30px;
         }
-        .left{
+        .one {
+            position: absolute;
+            height: 200px;
             width: 200px;
-            height: 200px;
-            background: #5A6A94;
-            float: left;
+            background-color: blue;
         }
-        .right{
+        .two {
             height: 200px;
-            background: #BE4F4F;
-            /*margin-left: 200px;*/
-            /*width: 100%;*/
+            margin-left: 200px;
+            background-color: red;
         }
     </style>
 </head>
 <body>
-<!-- 左边定宽 -->
-<aside class="left">Left</aside>
-<!-- 右边自适应 -->
-<section class="right">Right</section>
+<div class="one"></div>
+<div class="two">第一种方法</div>
 </body>
 </html>
