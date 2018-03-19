@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;  minimum-scale=1.0; maximum-scale=1.0"/>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+<script>
+    /*
+  <meta name="viewport" content="width=device-width; initial-scale=1.0;  minimum-scale=1.0; maximum-scale=1.0"/>
+  其中的width 原本等于layout viewpoint  也就是常见的980px
+  device-width 的含义是设备独立像素的大小；等于 设备物理像素/dpr(window.devicePixelRatio) = 设备独立像素(css像素)
+  比如在iphone6上也就是375 * 667 iphone6 plus 上414 * 736
+  原先如果不设置width = device-width 的话那么需要写一个div宽度为980px 才能铺满整个屏幕
+  现在设置了width = device-width 的话那么只需要设置一个div宽度为375px(iphone 6) 就可以铺满整个屏幕了
+  */
+
+    /*
+    设备物理像素：640 * 960 640 * 1136 750 * 1134 1080 * 1920 物理像素是有实际面积的
+    设备独立像素 = CSS 像素
+    dpr = 设备物理像素 / 设备独立像素
+
+    设备独立像素是已知的 比如 750 * 1134
+    要想知道dpr的值 可以通过两个方法 第一个是 用window.devicePixelRatio 或者ppi去获得dpr的值（此方法待验证严谨性）
+
+    完美适配就是要实现某一个block所占用的实际物理面积与所在屏幕的物理面积比例相同
+    再具体一点：假如有一个按钮 这个按钮的大小占所在屏幕的大小比例在不同手机上是相同的
+    用公式表达为
+    B1/P1 = B2/P2;
+    其中B1是这个按钮在手机P1上的实际物理面积；P1是该手机的实际物理面积
+        B2是这个按钮在手机P2上的实际物理面积；P2是该手机的实际物理面积
+    问题来了假如一个button按钮 psd图上给的尺寸是100 * 100 px 大小 画布是iPhone6 这款手机屏幕
+    那如何等比例的在其他手机上也完美适配了？
+    首先我们需要计算出这个button在iPhone6上的比例大小
+    那这个button 100*100px 这个像素尺寸实际在IPhone6上有多大的物理面积了？
+    在编程中我们就直接写button css属性width:100px height:100px;(这边还有一个问题我们暂时不考虑)
+    =》已知 iPhone6 的物理像素为 750*1334 px(这里的px是指的实际物理最小尺寸的大小) dpr 为2 由此得出iPhone6的CSS像素是375*667
+    =》100/375  这个比例值就是100/375
+    现在我们把问题转移到iPhone5上面来思考这个问题
+    iPhone5的CSS像素是320*568px
+    显然我们不能设置这个button的css属性width:100px height:100px
+    因为如果这么写的话显然 (100/320) != （100/375) 那我们该怎么办了？
+    实际上我们希望这个button在iPhone5上稍微小一点！
+    =》接下来我们换一种思路来解决这个问题
+    我们先获取设备的CSS像素然后把这个像素进行等分10个
+    那么对于iPhone5的话320px/10 = 32px;
+    这时我们把html的font-size设置为32px
+    那么在写这个button的css属性时候我们可以写成100/32 rem;
+    */
+
+    /*
+    补充：ppi 和 dpr 关系 原则上dpr的值又ppi决定 ppi的基准是160；假如手机的ppi是320的话dpr就是2
+    但是在iPhone6 plus 确实例外 这个时候dpr 有手机硬件强制设置为3了（如果按照之前的计算公式 iPhone6 plus 的dpr大约为2.5）
+    此时又出现一个问题就是如果 按照之前的另外一个公式 drp  = 设备物理像素 / 设备独立像素(CSS 像素) 那么得到的是iPhone6 plus
+    的css像素是360 * 640px 但是实际中却是414 * 736 px
+     */
+</script>
+
+</body>
+</html>
