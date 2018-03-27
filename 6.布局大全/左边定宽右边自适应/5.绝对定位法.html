@@ -2,28 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>1.左边设置浮动右边宽度设置100%</title>
+    <title>5.绝对定位法</title>
     <style>
         * {
             padding: 0;
             margin: 0;
             font-size: 30px;
         }
-        .one {
+        .left {
             position: absolute;
             height: 200px;
-            width: 200px;
+            width: 500px;
             background-color: blue;
         }
-        .two {
+        .right {
             height: 200px;
-            margin-left: 200px;
+            margin-left: 500px;
             background-color: red;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-<div class="one"></div>
-<div class="two">第一种方法</div>
+<div class="left">left</div>
+<div class="right">right</div>
 </body>
 </html>

@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>1.左边设置浮动右边宽度设置100%</title>
-    <meta name="viewport" content="width=device-width; initial-scale=1.0;  minimum-scale=1.0; maximum-scale=1.0"/>
+    <title>3.calc方法</title>
     <style>
         * {
             padding: 0;
@@ -11,25 +10,23 @@
             font-size: 30px;
         }
         .left{
-            width: 500px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             background: #5A6A94;
             float: left;
         }
         .right{
-            height: 100px;
+            height: 200px;
             background: #BE4F4F;
-            /*text-align: center;*/
+            float: left;
+            width: calc(100% - 200px);
         }
     </style>
 </head>
 <body>
 <!-- 左边定宽 -->
-<div class="left">Left</div>
+<aside class="left">Left</aside>
 <!-- 右边自适应 -->
-<div class="right">Right</div>
-
-<script>
-</script>
+<section class="right">Right</section>
 </body>
 </html>
