@@ -13,12 +13,16 @@
         }
 
         .container {
-            display: flex;
+            /* display: flex;
             flex-wrap: wrap;
             box-sizing: border-box;
-            padding-right: 20px;
+            padding-right: 20px; */
             /* justify-content: space-between; */
-            min-width: 1200px;
+            /* min-width: 1200px; */
+            width: 500px;
+            height: 500px;
+            border: 1px solid red;
+            margin: 30px;
         }
 
         .item {
@@ -38,15 +42,23 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="item">
+    <div class="container" id='demo'>
+        <!-- <div class="item">
             <div style="background-color: red;height: 100%;"></div>
         </div>
         <div class="item">
-            <div style="background-color: red;height: 100%;"></div>
-        </div>
+            <div style="background-color: red;height: 100%;" id='demo'>
+            </div>
+        </div> -->
 
     </div>
+
+    <script>
+        console.log(document.getElementById("demo").offsetLeft)
+        console.log(document.getElementById("demo").offsetTop)
+        console.log(document.getElementById("demo").getBoundingClientRect())
+
+    </script>
 </body>
 
 </html>
