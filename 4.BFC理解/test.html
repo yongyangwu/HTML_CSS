@@ -9,37 +9,30 @@
             margin: 0;
             padding: 0;
         }
-        body{
-            height: 300px;
-            position: relative;
-        }
-        .aside{
-            width: 100px;
-            height: 150px;
-            float: left;
-            background-color: pink;
-        }
-        .main{
+        .div1{
+            width: 300px;
             height: 200px;
             background-color: red;
-            overflow: hidden;
         }
+        .div2{
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+        }
+        .child{
+            width: 100px;
+            height: 50px;
+            margin-top: 50px;
+        }
+     
     </style>
 </head>
 <body>
 <body>
-
-<div class="aside">
-
+<div class="div1"></div>
+<div class="div2">
+    <div class="child"></div>
 </div>
-<div class="main">
-</div>
-
-
-
-
-
-
 
 </body>
 </html>

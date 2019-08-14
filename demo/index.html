@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CSS3自适应浏览器大小导航代码 - 站长素材</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+<!--<link rel="stylesheet" type="text/css" href="css/reset.css">-->
+<!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+
+	<style>
+		.index-nav-frame{
+			width: 1200px;margin: 0 auto;height: 90px;
+		    display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-family: "Microsoft YaHei";
+		}
+		.index-nav-frame-line{
+			border: 1px solid black;
+			color: #333333;
+			background: white;
+			position: relative;
+			display: block;
+			outline: none;cursor: pointer;width: 100px;line-height: 50px;text-align: center;}
+		/*.index-nav-frame-line.active{color:#b63b4d;}*/
+
+		.index-nav-frame-line-center{
+			background: #00cc99;
+			opacity: 0;height: 0;position: absolute;
+			overflow: hidden;width: 100%;
+			transition: all 0.5s;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;/* Firefox 4 */-o-transition: all 0.5s; /* Opera */}
+		.index-nav-frame-line-li{
+			width: 100%;
+			color:#fff;
+			font-weight: 500;text-align: center;background: #1163B7;border:1px solid #1163B7;display: inline-block}
+		.index-nav-frame-line-li:hover{color: white;}
+		.index-nav-frame-line-li:hover a{color: white;}
+		.index-nav-frame-line:hover .index-nav-frame-line-center{height:auto;opacity: 1;}
+	</style>
+
+</head>
+<body >
+
+	<div class="index-nav-frame">
+		<div class="index-nav-frame-line active" tabindex="-1">
+			首页
+			<div class="index-nav-frame-line-center">
+				<a class="index-nav-frame-line-li">
+					首页1
+				</a>
+				<a class="index-nav-frame-line-li">
+					首页1
+				</a>
+
+			</div>
+		</div>
+		<div class="index-nav-frame-line active" tabindex="-1">
+			首页
+			<div class="index-nav-frame-line-center">
+				<a class="index-nav-frame-line-li">
+					首页1
+				</a>
+
+			</div>
+		</div>
+		<div class="index-nav-frame-line active" tabindex="-1">
+			首页
+			<div class="index-nav-frame-line-center">
+				<a class="index-nav-frame-line-li">
+					首页1
+				</a>
+
+			</div>
+		</div>
+		<div class="index-nav-frame-line active" tabindex="-1">
+			首页
+			<div class="index-nav-frame-line-center">
+				<a class="index-nav-frame-line-li">
+					首页1
+				</a>
+
+			</div>
+		</div>
+	</div>
+
+
+</body>
+</html>

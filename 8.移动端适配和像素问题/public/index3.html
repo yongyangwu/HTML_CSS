@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="./375.png" alt=""> -->
+    <!-- <img src="./750.png" alt="" width="50%"> -->
+    <div style="width: 320px;height: 100px;background-color: red">
+
+    </div>
+    <script>
+        // iphone6  750 1134   iphone6 plus 1080 1920
+        //
+        console.log(window.devicePixelRatio)
+        console.log(window.screen.width)
+
+        var str = '123-mm356';
+var strReg = str.replace(/(\d+)-([A-Za-z]+)(\d+)/g,'$1');
+console.log(strReg)//mm  上面那段$2这个就是表示正则第二组个匹配到的内容
+    </script>
+    
+</body>
+</html>
